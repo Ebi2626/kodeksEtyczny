@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import Hamburger from "./hamburger";
 import React from "react";
 
-const Header = ({ siteTitle, initialWidth }) => {
+const Header = ({ initialWidth }) => {
   const menuList = navItems.map(el => (
     <li>
       <Link

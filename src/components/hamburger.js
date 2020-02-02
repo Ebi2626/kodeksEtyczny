@@ -63,12 +63,13 @@ const Hamburger = () => {
     zIndex: 100,
     backgroundColor: "white"
   };
-  if (windowBlock) {
-    document.querySelector("html").style.overflowY = "hidden";
-  } else {
-    document.querySelector("html").style.overflowY = "auto";
-  }
+  
   useEffect(() => {
+    if (windowBlock) {
+        document.querySelector("html").style.overflowY = "hidden";
+      } else {
+        document.querySelector("html").style.overflowY = "auto";
+      }
     if (window.innerWidth > 800) {
       document.querySelector("html").style.overflowY = "auto";
     }

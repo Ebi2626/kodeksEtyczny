@@ -31,7 +31,6 @@ const Layout = ({ children }) => {
     setWidth(window.innerWidth);
   }
   function textAreaHandler(e) {
-    console.log(e.target.value);
     setMessage(e.target.value);
   }
   useEffect(()=>{
@@ -81,7 +80,8 @@ const Layout = ({ children }) => {
             >
               Byłeś świadkiem nieetycznego postępowania? Daj nam znać: <br />
               <textarea
-                style={{ margin: 10 }}
+                style={{ margin: 10,
+                minWidth: 100, minHeight: 50 }}
                 onChange={textAreaHandler}
                 value={message}
               />
