@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ListItem = styled.p`
+const ListItem = styled.div`
   position: relative;
   display: block;
   width: 100%;

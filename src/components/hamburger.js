@@ -68,12 +68,11 @@ const Hamburger = () => {
   } else {
     document.querySelector("html").style.overflowY = "auto";
   }
-  useEffect(()=>{
+  useEffect(() => {
     if (window.innerWidth > 800) {
-        document.querySelector("html").style.overflowY = "auto";
+      document.querySelector("html").style.overflowY = "auto";
     }
-  })
-        
+  });
 
   return (
     <div
@@ -93,6 +92,7 @@ const Hamburger = () => {
               <Link
                 style={{ color: "black", textDecoration: "none" }}
                 to={el.toLowerCase().replace(" ", "-")}
+                key={el.toLowerCase().replace(" ", "-")}
               >
                 {el}
               </Link>

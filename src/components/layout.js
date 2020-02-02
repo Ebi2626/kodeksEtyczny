@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
@@ -13,7 +13,7 @@ import Header from "./header";
 import "./layout.css";
 
 const Layout = ({ children }) => {
-  let initialWidth = window.innerWidth;
+  let initialWidth = 400;
   const [width, setWidth] = useState(initialWidth);
   const [message, setMessage] = useState(
     "Twoja wiadomosc jest w pełni anonimowa"
@@ -35,6 +35,10 @@ const Layout = ({ children }) => {
     setMessage(e.target.value);
   }
   window.addEventListener("resize", adjustLayout);
+  document.addEventListener("loadstart", adjustLayout);
+  useEffect(()=>{
+    adjustLayout();
+  })
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} initialWidth={width} />

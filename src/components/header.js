@@ -10,6 +10,7 @@ const Header = ({ siteTitle, initialWidth }) => {
       <Link
         style={{ color: "white", textDecoration: "none" }}
         to={el.toLowerCase().replace(" ", "-")}
+        key={el.toLowerCase().replace(" ", "-")}
       >
         {el}
       </Link>
