@@ -1,6 +1,2 @@
-const navItems = [
-    "blog",
-    "o mnie",
-    "kontakt"
-]
+const navItems = ["dla klienta", "dla pracownika", "dla pracodawcy", "faq"];
 export default navItems;
