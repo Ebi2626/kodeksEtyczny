@@ -34,8 +34,6 @@ const Layout = ({ children }) => {
     console.log(e.target.value);
     setMessage(e.target.value);
   }
-  window.addEventListener("resize", adjustLayout);
-  document.addEventListener("loadstart", adjustLayout);
   useEffect(()=>{
     adjustLayout();
   })
