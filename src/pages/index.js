@@ -102,54 +102,100 @@ const IndexPage = () => (
         Nasze obowiązki
       </Title>
       <Row>
-        <InnerRow  style={{ alignItems: "flex-start" }}>
-        <div style={{ flexBasis: "30%", flexGrow: 1 }}>
-          <h3 style={{ textAlign: "center", color: "white" }}>Tworzenie profesjonalne</h3>
-          <Text style={{ color: "white" }}>
-            Jako profesjonaliści jesteśmy odpowiedzialni za swoją pracę przed najsurowszym z szefów, czyli przed sobą samym. Wierzymy, że tylko takie oprogramowanie, z którego jesteśmy dumni jest odpowiednie, by oddać je klientowi.
-          </Text>
-        </div>
-        <div style={{ flexBasis: "30%", flexGrow: 1 }}>
-          <h3 style={{ textAlign: "center", color: "white" }}>Tworzenie udokumentowane</h3>
-          <Text style={{ color: "white" }}>
-            Wiemy, że nasza praca nie jest wieczna i przy naszym produkcie w przyszłości będą pracowali inni programiści dlatego dbamy o to, by każda linijka naszego kodu była odpowiednio udokumentowana i wytłumaczona w komentarzach. Doskonale znam bolączki programistów, którzy muszą odkryć, co poprzedni programista miał na myśli, dlatego nasze oprogramowanie tworzymy z myślą o innych.
-          </Text>
-        </div>
-        <div style={{ flexBasis: "30%", flexGrow: 1 }}>
-          <h3 style={{ textAlign: "center", color: "white" }}>Tworzenie odpowiedziane</h3>
-          <Text style={{ color: "white" }}>
-            Nie wierzymy, że wskaźniki biznesowe, czy profity ekonomiczne mogą stać ponad wartościami etycznymi. Z tego powodu nie decydujemy się na współpracę wątpliwą etycznie lub z firmami, których wartości stoją w sprzeczności z naszymi.
-          </Text>
-        </div>
-
+        <InnerRow style={{ alignItems: "flex-start" }}>
+          <div style={{ flexBasis: "30%", flexGrow: 1 }}>
+            <h3 style={{ textAlign: "center", color: "white" }}>
+              Tworzenie profesjonalne
+            </h3>
+            <Text style={{ color: "white" }}>
+              Jako profesjonaliści jesteśmy odpowiedzialni za swoją pracę przed
+              najsurowszym z szefów, czyli przed sobą samym. Wierzymy, że tylko
+              takie oprogramowanie, z którego jesteśmy dumni jest odpowiednie,
+              by oddać je klientowi.
+            </Text>
+          </div>
+          <div style={{ flexBasis: "30%", flexGrow: 1 }}>
+            <h3 style={{ textAlign: "center", color: "white" }}>
+              Tworzenie udokumentowane
+            </h3>
+            <Text style={{ color: "white" }}>
+              Wiemy, że nasza praca nie jest wieczna i przy naszym produkcie w
+              przyszłości będą pracowali inni programiści dlatego dbamy o to, by
+              każda linijka naszego kodu była odpowiednio udokumentowana i
+              wytłumaczona w komentarzach. Doskonale znam bolączki programistów,
+              którzy muszą odkryć, co poprzedni programista miał na myśli,
+              dlatego nasze oprogramowanie tworzymy z myślą o innych.
+            </Text>
+          </div>
+          <div style={{ flexBasis: "30%", flexGrow: 1 }}>
+            <h3 style={{ textAlign: "center", color: "white" }}>
+              Tworzenie odpowiedziane
+            </h3>
+            <Text style={{ color: "white" }}>
+              Nie wierzymy, że wskaźniki biznesowe, czy profity ekonomiczne mogą
+              stać ponad wartościami etycznymi. Z tego powodu nie decydujemy się
+              na współpracę wątpliwą etycznie lub z firmami, których wartości
+              stoją w sprzeczności z naszymi.
+            </Text>
+          </div>
         </InnerRow>
       </Row>
     </div>
-    <Title style={{ borderBottom: "none", margin: "20px auto"}}>Szukasz odpowiedzi na pytanie natury etycznej?</Title>
+    <Title style={{ borderBottom: "none", margin: "20px auto" }}>
+      Szukasz odpowiedzi na pytanie natury etycznej?
+    </Title>
     <Row>
       <InnerRow>
-       <Text>Zajrzyj do odpowiedniego działu gdzie staramy się odpowiedzieć na pytania związane z Twoimi wątpliwościami</Text> 
+        <Text>
+          Skorzystaj z opracowanego przez nas narzędzia do rozstrzygania
+          dylematów moralnych
+        </Text>
+      </InnerRow>
+    </Row>
+    <Row>
+      <InnerRow>
+        <Text>
+          <Link
+            to="/e-sumienie"
+            style={{
+              fontSize: 30,
+              marginBottom: 20,
+              color: "navy",
+              textDecoration: "none"
+            }}
+          >
+            E-sumienie
+          </Link>
+        </Text>
+      </InnerRow>
+    </Row>
+    <Row>
+      <InnerRow>
+        <Text>
+          lub zajrzyj do odpowiedniego działu gdzie staramy się odpowiedzieć na
+          pytania związane z Twoimi wątpliwościami
+        </Text>
       </InnerRow>
     </Row>
     <Row>
       <InnerRow>
         <Link
-                style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
-                to="/dla-klienta"
-              >
-                Dla klienta
+          style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
+          to="/dla-klienta"
+        >
+          Dla klienta
         </Link>
         <Link
-                style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
-                to="/dla-pracownika"
-              >
-                Dla pracownika
+          style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
+          to="/dla-pracownika"
+        >
+          Dla pracownika
         </Link>
         <Link
-                style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
-                to="/dla-pracodawcy"
-              >
-                Dla pracodawcy
+          style={{ marginBottom: 20, color: "navy", textDecoration: "none" }}
+          to="/dla-pracodawcy"
+        >
+          Dla pracodawcy
         </Link>
       </InnerRow>
     </Row>

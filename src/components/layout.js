@@ -7,6 +7,8 @@
 
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import Row from "../style/row";
+import InnerRow from "../style/innerRow";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
@@ -33,9 +35,9 @@ const Layout = ({ children }) => {
   function textAreaHandler(e) {
     setMessage(e.target.value);
   }
-  useEffect(()=>{
+  useEffect(() => {
     adjustLayout();
-  })
+  });
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} initialWidth={width} />
@@ -58,40 +60,43 @@ const Layout = ({ children }) => {
             color: `white`
           }}
         >
-          <div
-            style={{
-              width: "100vw",
-              minHeight: "75px",
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "flex-start",
-              color: "white",
-              alignItems: "center",
-              flexWarp: "wrap",
-              marginBottom: 10,
-              padding: 10
-            }}
-          >
-            <label
-              htmlFor="message"
-              style={{
-                margin: 5
-              }}
-            >
-              Byłeś świadkiem nieetycznego postępowania? Daj nam znać: <br />
-              <textarea
-                style={{ margin: 10,
-                minWidth: 100, minHeight: 50 }}
-                onChange={textAreaHandler}
-                value={message}
-              />
-              <button
-                style={{ borderRadius: 5, marginTop: 20, float: "right" }}
+          <Row>
+            <InnerRow>
+              <label
+                htmlFor="message"
+                style={{
+                  margin: 5,
+                  width: "80%",
+                  textAlign: "center"
+                }}
               >
-                Wyślij
-              </button>
-            </label>
-          </div>
+                Byłeś świadkiem nieetycznego postępowania? Daj nam znać: <br />
+                <textarea
+                  style={{
+                    height: 80,
+                    width: "100%",
+                    margin: "10px auto",
+                    minWidth: 100,
+                    minHeight: 50,
+                    maxWidth: 600,
+                    color: "#555"
+                  }}
+                  onChange={textAreaHandler}
+                  onClick={() => {
+                    if (message === "Twoja wiadomość jest w pełni anonimowa") {
+                      setMessage("");
+                    }
+                  }}
+                  value={message}
+                />
+              </label>
+            </InnerRow>
+          </Row>
+          <Row>
+            <InnerRow>
+              <button style={{ borderRadius: 5 }}>Wyślij</button>
+            </InnerRow>
+          </Row>
           <div
             style={{
               width: "100vw",
