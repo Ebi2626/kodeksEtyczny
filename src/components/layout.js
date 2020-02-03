@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
   let initialWidth = 400;
   const [width, setWidth] = useState(initialWidth);
   const [message, setMessage] = useState(
-    "Twoja wiadomosc jest w pełni anonimowa"
+    "Twoja wiadomość jest w pełni anonimowa"
   );
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
