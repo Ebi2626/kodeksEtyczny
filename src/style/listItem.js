@@ -16,13 +16,11 @@ const ListItem = styled.div`
     font-size: 22px;
     line-height: 28px;
     color: navy;
-    font-family: Montserrat;
     margin-bottom: 10px;
     & > span {
       margin-right: 5px;
       font-size: 28px;
       color: navy;
-      font-family: Montserrat;
       font-weight: bold;
     }
   }

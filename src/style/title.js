@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Title = styled.h2`
-  font-family: Montesrrat;
   font-size: 20px;
   color: navy;
   text-align: center;
